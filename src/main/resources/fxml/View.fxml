@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="leftVBox" spacing="5.0">
+         <children>
+            <Label fx:id="buscarLabel" text="Buscar:" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="reemplazarLabel" text="Reemplazar con:" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="centerVBox" prefWidth="350.0" spacing="5.0" HBox.hgrow="ALWAYS">
+         <children>
+            <TextField fx:id="buscarTextField" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="reemplazarTextField" VBox.vgrow="ALWAYS" />
+            <FlowPane fx:id="OptionsFlowPane" columnHalignment="CENTER" hgap="5.0" vgap="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <CheckBox fx:id="mayusCheckBox" mnemonicParsing="false" text="Mayúsculas y minúsculas" />
+                  <CheckBox fx:id="buscarCheckBox" mnemonicParsing="false" text="Buscar hacia atrás" />
+                  <CheckBox fx:id="exprCheckBox" mnemonicParsing="false" text="Expresión regular" />
+                  <CheckBox fx:id="resaltarCheckBox" mnemonicParsing="false" text="Resaltar resultados" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </FlowPane>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="rightVBox" prefWidth="125.0" spacing="5.0">
+         <children>
+            <Button fx:id="buscarButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Buscar" />
+            <Button fx:id="reemplazarButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Reemplazar" />
+            <Button fx:id="reemplazarTodoButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Reemplazar todo" />
+            <Button fx:id="cerrarButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cerrar" />
+            <Button fx:id="ayudaButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ayuda" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
